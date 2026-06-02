@@ -1,0 +1,1312 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>《新事》通諭 · 一個工人的一天 — 教宗良十三世論勞工問題（1891）</title>
+<meta name="description" content="教宗良十三世1891年《新事》通諭中文沉浸式專題。跟隨1891年一位紡織廠工人的一天，讀懂這份天主教社會訓導的奠基文獻。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;500;600;700;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #f1ead9;
+    --paper-deep: #e6dcc2;
+    --paper-shadow: #d9cda9;
+    --ink: #1c1f24;
+    --ink-soft: #4a4f57;
+    --ink-faint: #8a8579;
+    --teal: #1f3a3a;
+    --teal-light: #3a5e5e;
+    --brass: #a07d2c;
+    --brass-bright: #c9a248;
+    --papal-red: #8c2f2f;
+    --line: rgba(28, 31, 36, 0.18);
+    --line-soft: rgba(28, 31, 36, 0.08);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Noto Serif TC', 'Source Han Serif TC', 'PMingLiU', serif;
+    background: var(--paper);
+    color: var(--ink);
+    line-height: 1.85;
+    font-weight: 400;
+    overflow-x: hidden;
+    background-image:
+      radial-gradient(circle at 25% 30%, rgba(160, 125, 44, 0.04) 0%, transparent 50%),
+      radial-gradient(circle at 75% 70%, rgba(31, 58, 58, 0.03) 0%, transparent 50%),
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.11 0 0 0 0 0.12 0 0 0 0 0.14 0 0 0 0.025 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  ::selection { background: var(--brass-bright); color: var(--ink); }
+
+  /* —— Top Navigation —— */
+  nav.top {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    backdrop-filter: blur(10px);
+    background: rgba(241, 234, 217, 0.85);
+    border-bottom: 1px solid var(--line-soft);
+    padding: 14px 32px;
+    display: flex; align-items: center; justify-content: space-between;
+    font-size: 13px;
+  }
+  nav.top .brand {
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    color: var(--teal);
+    text-transform: uppercase;
+    font-family: 'Cormorant Garamond', 'Noto Serif TC', serif;
+    font-size: 14px;
+  }
+  nav.top .links { display: flex; gap: 28px; }
+  nav.top a {
+    color: var(--ink-soft);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: color 0.2s, border-color 0.2s;
+    padding-bottom: 2px;
+  }
+  nav.top a:hover { color: var(--papal-red); border-color: var(--papal-red); }
+  @media (max-width: 720px) {
+    nav.top { padding: 12px 18px; }
+    nav.top .links { gap: 16px; font-size: 12px; }
+    nav.top .links a:nth-child(n+4) { display: none; }
+  }
+
+  /* —— HERO —— */
+  .hero {
+    min-height: 100vh;
+    padding: 120px 24px 80px;
+    display: flex; flex-direction: column; justify-content: center; align-items: center;
+    text-align: center;
+    position: relative;
+    border-bottom: 1px solid var(--line);
+    overflow: hidden;
+  }
+  .hero-bg {
+    position: absolute; inset: 0;
+    background-image: url('hero-bg.png');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.25;
+    filter: sepia(0.4);
+    pointer-events: none;
+    z-index: 0;
+  }
+  .hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse 800px 400px at 50% 100%, rgba(160, 125, 44, 0.08), transparent),
+      radial-gradient(ellipse 600px 300px at 50% 0%, rgba(31, 58, 58, 0.05), transparent),
+      linear-gradient(180deg, rgba(241,234,217,0.4) 0%, rgba(241,234,217,0.6) 50%, rgba(241,234,217,0.9) 100%);
+    pointer-events: none;
+    z-index: 1;
+  }
+  .hero-inner { z-index: 2; }
+
+  /* —— Scene Images —— */
+  .scene-image {
+    margin: -36px -36px 28px;
+    aspect-ratio: 16 / 9;
+    background: linear-gradient(135deg, rgba(31,58,58,0.08), rgba(160,125,44,0.05));
+    overflow: hidden;
+    position: relative;
+    border-bottom: 1px solid var(--line);
+  }
+  .scene-image img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: sepia(0.15) contrast(0.98);
+  }
+  .scene-image::after {
+    content: '';
+    position: absolute; inset: 0;
+    background: linear-gradient(180deg, transparent 60%, rgba(241,234,217,0.4) 100%);
+    pointer-events: none;
+  }
+  @media (max-width: 720px) {
+    .scene-image { margin: -24px -24px 20px; }
+  }
+  .hero-inner { max-width: 880px; position: relative; z-index: 1; }
+  .hero .latin-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: clamp(20px, 3vw, 28px);
+    color: var(--brass);
+    letter-spacing: 0.05em;
+    margin-bottom: 8px;
+  }
+  .hero .date-stamp {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.3em;
+    color: var(--ink-faint);
+    margin-bottom: 36px;
+  }
+  .hero h1 {
+    font-family: 'Noto Serif TC', serif;
+    font-size: clamp(80px, 16vw, 180px);
+    font-weight: 900;
+    line-height: 0.95;
+    letter-spacing: 0.05em;
+    color: var(--ink);
+    margin-bottom: 8px;
+    text-shadow: 1px 1px 0 var(--paper-deep);
+  }
+  .hero h1 .char {
+    display: inline-block;
+    margin: 0 0.08em;
+  }
+  .hero h2 {
+    font-family: 'Noto Serif TC', serif;
+    font-size: clamp(18px, 2.5vw, 26px);
+    font-weight: 400;
+    letter-spacing: 0.4em;
+    color: var(--teal);
+    margin: 16px 0 32px;
+    padding-left: 0.4em;
+  }
+  .hero .author {
+    font-size: 14px;
+    color: var(--ink-soft);
+    letter-spacing: 0.15em;
+    margin-bottom: 56px;
+  }
+  .hero .opening-quote {
+    font-family: 'Noto Serif TC', serif;
+    font-size: clamp(18px, 2vw, 24px);
+    color: var(--ink);
+    font-weight: 400;
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 56px;
+    padding: 32px 0;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    position: relative;
+  }
+  .hero .opening-quote::before, .hero .opening-quote::after {
+    content: '✦';
+    color: var(--brass);
+    font-size: 12px;
+    position: absolute;
+    left: 50%; transform: translateX(-50%);
+  }
+  .hero .opening-quote::before { top: -7px; background: var(--paper); padding: 0 12px; }
+  .hero .opening-quote::after { bottom: -7px; background: var(--paper); padding: 0 12px; }
+  .hero .stats {
+    display: flex; justify-content: center; gap: clamp(20px, 5vw, 60px); flex-wrap: wrap;
+    margin-bottom: 48px;
+  }
+  .hero .stat { text-align: center; }
+  .hero .stat .num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 44px; font-weight: 500;
+    color: var(--papal-red);
+    line-height: 1;
+  }
+  .hero .stat .label {
+    font-size: 12px;
+    color: var(--ink-soft);
+    letter-spacing: 0.2em;
+    margin-top: 8px;
+  }
+  .scroll-cue {
+    font-size: 12px;
+    color: var(--ink-faint);
+    letter-spacing: 0.3em;
+    animation: pulse 2s infinite;
+  }
+  .scroll-cue::after { content: ' ⌄'; }
+  @keyframes pulse {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
+  }
+
+  /* —— SECTION COMMONS —— */
+  section { padding: 100px 24px; position: relative; }
+  .container { max-width: 880px; margin: 0 auto; }
+  .container-wide { max-width: 1200px; margin: 0 auto; }
+  .overline {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.4em;
+    color: var(--brass);
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    display: inline-block;
+  }
+  .overline::before {
+    content: '— ';
+    color: var(--brass);
+  }
+  h2.section-title {
+    font-family: 'Noto Serif TC', serif;
+    font-size: clamp(32px, 5vw, 48px);
+    font-weight: 600;
+    color: var(--ink);
+    line-height: 1.3;
+    margin-bottom: 24px;
+    letter-spacing: 0.05em;
+  }
+  .lede {
+    font-size: 18px;
+    color: var(--ink-soft);
+    line-height: 1.9;
+    margin-bottom: 48px;
+    max-width: 640px;
+  }
+  p { font-size: 17px; line-height: 1.9; color: var(--ink); margin-bottom: 20px; }
+  p.indented { text-indent: 2em; }
+
+  /* —— CONTEXT (1891年的世界) —— */
+  #context { background: linear-gradient(180deg, var(--paper) 0%, var(--paper-deep) 100%); }
+  #context .columns {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 40px;
+    margin-top: 56px;
+  }
+  #context .col {
+    padding: 32px 24px;
+    background: rgba(255, 255, 255, 0.3);
+    border-left: 2px solid var(--brass);
+    position: relative;
+  }
+  #context .col-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 56px;
+    color: var(--brass);
+    line-height: 1;
+    opacity: 0.4;
+    position: absolute;
+    top: 12px; right: 20px;
+  }
+  #context .col h3 {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--teal);
+    margin-bottom: 16px;
+  }
+  #context .col p {
+    font-size: 15px;
+    line-height: 1.85;
+    color: var(--ink-soft);
+  }
+
+  /* —— WORKER'S DAY —— */
+  #worker-day {
+    background: var(--paper);
+    padding: 120px 24px;
+  }
+  #worker-day .day-intro {
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto 80px;
+  }
+  #worker-day .character-card {
+    margin-top: 48px;
+    padding: 32px;
+    border: 1px solid var(--line);
+    background: rgba(255, 255, 255, 0.4);
+    text-align: left;
+    display: flex;
+    gap: 28px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  #worker-day .character-card .portrait {
+    width: 100px; height: 100px;
+    background: var(--teal);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    color: var(--paper); font-size: 36px;
+    font-family: 'Noto Serif TC', serif;
+    flex-shrink: 0;
+  }
+  #worker-day .character-card .meta { flex: 1; min-width: 240px; }
+  #worker-day .character-card .meta h4 {
+    font-size: 22px;
+    margin-bottom: 8px;
+    color: var(--ink);
+  }
+  #worker-day .character-card .meta .tag {
+    display: inline-block;
+    font-size: 11px;
+    background: var(--brass);
+    color: var(--paper);
+    padding: 3px 10px;
+    border-radius: 2px;
+    margin-right: 6px;
+    letter-spacing: 0.1em;
+    font-family: 'JetBrains Mono', monospace;
+  }
+  #worker-day .character-card .meta p {
+    font-size: 15px;
+    color: var(--ink-soft);
+    margin-top: 12px;
+    margin-bottom: 0;
+  }
+
+  .timeline {
+    position: relative;
+    margin-top: 100px;
+  }
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 100px; top: 0; bottom: 0;
+    width: 1px;
+    background: linear-gradient(180deg,
+      #1a2845 0%,       /* 04:30 dawn */
+      #4a5a7a 12%,      /* 05:00 walking */
+      #8a7a4a 25%,      /* 06:00 work */
+      #c9a248 40%,      /* 12:00 noon */
+      #a87a3a 55%,      /* 12:30 afternoon */
+      #7a4a3a 68%,      /* 18:30 dusk */
+      #4a2a3a 80%,      /* 19:30 evening */
+      #1a1a2a 90%,      /* 21:00 night */
+      #c9a248 100%      /* sunday morning */
+    );
+  }
+  @media (max-width: 720px) {
+    .timeline::before { left: 24px; }
+  }
+
+  .station {
+    position: relative;
+    padding-left: 160px;
+    margin-bottom: 100px;
+  }
+  @media (max-width: 720px) {
+    .station { padding-left: 60px; }
+  }
+  .station::before {
+    content: '';
+    position: absolute;
+    left: 92px; top: 18px;
+    width: 17px; height: 17px;
+    border-radius: 50%;
+    background: var(--paper);
+    border: 2px solid var(--ink);
+    z-index: 2;
+  }
+  @media (max-width: 720px) {
+    .station::before { left: 16px; }
+  }
+  .station .time-marker {
+    position: absolute;
+    left: 0; top: 14px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--ink);
+    letter-spacing: 0.05em;
+  }
+  @media (max-width: 720px) {
+    .station .time-marker {
+      position: relative; top: 0; left: 0;
+      margin-bottom: 8px;
+      font-size: 12px;
+      color: var(--ink-faint);
+    }
+  }
+  .station .scene-card {
+    background: rgba(255, 255, 255, 0.5);
+    border: 1px solid var(--line);
+    padding: 36px;
+    position: relative;
+  }
+  .station .scene-card::before {
+    content: '';
+    position: absolute;
+    top: -1px; left: -1px;
+    width: 24px; height: 24px;
+    border-top: 2px solid var(--brass);
+    border-left: 2px solid var(--brass);
+  }
+  .station .scene-card::after {
+    content: '';
+    position: absolute;
+    bottom: -1px; right: -1px;
+    width: 24px; height: 24px;
+    border-bottom: 2px solid var(--brass);
+    border-right: 2px solid var(--brass);
+  }
+  .station .scene-emoji {
+    font-size: 28px;
+    margin-bottom: 12px;
+    display: block;
+  }
+  .station h3 {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 16px;
+    letter-spacing: 0.05em;
+  }
+  .station .scene-text {
+    font-size: 16px;
+    color: var(--ink-soft);
+    line-height: 1.9;
+    margin-bottom: 28px;
+    font-style: italic;
+  }
+  .station .scene-text::before {
+    content: '「';
+    color: var(--brass);
+    font-style: normal;
+  }
+  .station .scene-text::after {
+    content: '」';
+    color: var(--brass);
+    font-style: normal;
+  }
+  .station .teaching-block {
+    margin-top: 32px;
+    padding-top: 24px;
+    border-top: 1px dashed var(--line);
+  }
+  .station .teaching-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--papal-red);
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  .station .teaching-theme {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 20px;
+    color: var(--teal);
+    font-weight: 500;
+    margin-bottom: 18px;
+    letter-spacing: 0.08em;
+  }
+  .station blockquote {
+    font-family: 'Noto Serif TC', serif;
+    border-left: 3px solid var(--brass);
+    padding: 8px 0 8px 20px;
+    margin: 16px 0;
+    color: var(--ink);
+    font-size: 16px;
+    line-height: 1.9;
+  }
+  .station blockquote .source {
+    display: block;
+    font-size: 12px;
+    color: var(--ink-faint);
+    margin-top: 8px;
+    font-family: 'JetBrains Mono', monospace;
+    letter-spacing: 0.1em;
+  }
+  .station .reflection {
+    font-size: 14px;
+    color: var(--ink-soft);
+    margin-top: 16px;
+    padding: 12px 16px;
+    background: rgba(160, 125, 44, 0.06);
+    border-radius: 2px;
+  }
+
+  /* —— Day phases dividers —— */
+  .day-phase {
+    padding-left: 160px;
+    margin: 60px 0 40px;
+    position: relative;
+  }
+  @media (max-width: 720px) {
+    .day-phase { padding-left: 60px; }
+  }
+  .day-phase .phase-label {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 32px;
+    color: var(--brass);
+    letter-spacing: 0.1em;
+    border-bottom: 1px solid var(--brass);
+    padding-bottom: 8px;
+    display: inline-block;
+  }
+  .day-phase .phase-zh {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 20px;
+    color: var(--ink-soft);
+    margin-left: 16px;
+    letter-spacing: 0.2em;
+  }
+
+  /* —— Quote Wall —— */
+  #quotes {
+    background: linear-gradient(180deg, var(--paper-deep) 0%, var(--paper) 100%);
+    padding: 100px 24px;
+  }
+  .quote-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 28px;
+    margin-top: 56px;
+  }
+  .quote-card {
+    background: rgba(255, 255, 255, 0.4);
+    border: 1px solid var(--line);
+    padding: 32px 28px;
+    position: relative;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .quote-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 4px 6px 0 var(--brass);
+  }
+  .quote-card .quote-mark {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 72px;
+    color: var(--brass);
+    line-height: 1;
+    position: absolute;
+    top: 8px; right: 16px;
+    opacity: 0.4;
+  }
+  .quote-card .quote-text {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 17px;
+    line-height: 1.9;
+    color: var(--ink);
+    margin-bottom: 20px;
+    position: relative; z-index: 1;
+  }
+  .quote-card .quote-meta {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--ink-faint);
+    letter-spacing: 0.15em;
+    border-top: 1px solid var(--line);
+    padding-top: 12px;
+  }
+  .quote-card .quote-tag {
+    display: inline-block;
+    background: var(--teal);
+    color: var(--paper);
+    padding: 2px 10px;
+    border-radius: 2px;
+    font-family: 'Noto Serif TC', serif;
+    font-size: 11px;
+    margin-right: 8px;
+    letter-spacing: 0.1em;
+  }
+
+  /* —— Concept Cards —— */
+  #concepts {
+    background: var(--paper);
+    padding: 100px 24px;
+  }
+  .concept-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    margin-top: 48px;
+  }
+  .concept {
+    background: var(--paper-deep);
+    padding: 24px;
+    border-bottom: 3px solid var(--teal);
+    transition: all 0.3s;
+    cursor: default;
+  }
+  .concept:hover {
+    background: var(--teal);
+    color: var(--paper);
+    border-bottom-color: var(--brass);
+  }
+  .concept:hover .concept-name,
+  .concept:hover .concept-def { color: var(--paper); }
+  .concept:hover .concept-num { color: var(--brass-bright); }
+  .concept-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 13px;
+    color: var(--brass);
+    letter-spacing: 0.2em;
+    margin-bottom: 8px;
+    transition: color 0.3s;
+  }
+  .concept-name {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 12px;
+    letter-spacing: 0.05em;
+    transition: color 0.3s;
+  }
+  .concept-def {
+    font-size: 14px;
+    color: var(--ink-soft);
+    line-height: 1.75;
+    transition: color 0.3s;
+  }
+
+  /* —— Explore —— */
+  #explore {
+    background: var(--teal);
+    color: var(--paper);
+    padding: 100px 24px;
+  }
+  #explore .overline { color: var(--brass-bright); }
+  #explore h2.section-title { color: var(--paper); }
+  #explore .lede { color: rgba(241, 234, 217, 0.85); }
+  .explore-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+    margin-top: 56px;
+  }
+  .explore-card {
+    display: block;
+    background: rgba(241, 234, 217, 0.06);
+    border: 1px solid rgba(241, 234, 217, 0.2);
+    padding: 32px 28px;
+    text-decoration: none;
+    color: var(--paper);
+    transition: all 0.3s;
+    position: relative;
+  }
+  .explore-card:hover {
+    background: rgba(201, 162, 72, 0.15);
+    border-color: var(--brass-bright);
+    transform: translateY(-4px);
+  }
+  .explore-card .ec-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 13px;
+    color: var(--brass-bright);
+    letter-spacing: 0.3em;
+    margin-bottom: 16px;
+  }
+  .explore-card h3 {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 12px;
+    letter-spacing: 0.05em;
+  }
+  .explore-card p {
+    font-size: 14px;
+    color: rgba(241, 234, 217, 0.75);
+    line-height: 1.8;
+    margin: 0;
+  }
+  .explore-card .arrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: var(--brass-bright);
+    letter-spacing: 0.3em;
+    margin-top: 20px;
+    display: inline-block;
+  }
+  .explore-card:hover .arrow { color: var(--paper); }
+
+  /* —— Footer —— */
+  footer {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 60px 24px 40px;
+    text-align: center;
+  }
+  footer .footer-content { max-width: 720px; margin: 0 auto; }
+  footer .symbol {
+    font-family: 'Cormorant Garamond', serif;
+    color: var(--brass-bright);
+    font-size: 24px;
+    letter-spacing: 0.5em;
+    margin-bottom: 24px;
+  }
+  footer p {
+    color: rgba(241, 234, 217, 0.6);
+    font-size: 13px;
+    line-height: 1.9;
+    margin-bottom: 12px;
+  }
+  footer a {
+    color: var(--brass-bright);
+    text-decoration: none;
+    border-bottom: 1px dashed var(--brass);
+  }
+  footer .copyright {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--ink-faint);
+    letter-spacing: 0.2em;
+    margin-top: 32px;
+  }
+
+  /* —— Animations —— */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s, transform 0.8s;
+  }
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>
+</head>
+<body>
+
+<nav class="top">
+  <div class="brand">Rerum Novarum · 新事通諭</div>
+  <div class="links">
+    <a href="#hero">序幕</a>
+    <a href="#context">時代</a>
+    <a href="#worker-day">一日</a>
+    <a href="#quotes">金句</a>
+    <a href="themes.html">三條道路</a>
+    <a href="fulltext.html">全文</a>
+    <a href="context.html">背景</a>
+  </div>
+</nav>
+
+<!-- =========== HERO =========== -->
+<section class="hero" id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-inner">
+    <div class="latin-title">Rerum Novarum</div>
+    <div class="date-stamp">MDCCCXCI · MAY · 15 · ROMA</div>
+    <h1><span class="char">新</span><span class="char">事</span></h1>
+    <h2>論勞工問題</h2>
+    <div class="author">教宗良十三世 頒布 ｜ 1891年5月15日</div>
+    <div class="opening-quote">
+      資本沒有勞動就沒有辦法，<br>
+      勞動沒有資本亦然。<br>
+      互相協調乃能造成愉快和良好秩序的結果。
+    </div>
+    <div class="stats">
+      <div class="stat">
+        <div class="num">135</div>
+        <div class="label">頒布週年</div>
+      </div>
+      <div class="stat">
+        <div class="num">44</div>
+        <div class="label">譯本段落</div>
+      </div>
+      <div class="stat">
+        <div class="num">1<sup>st</sup></div>
+        <div class="label">社會訓導奠基</div>
+      </div>
+    </div>
+    <div class="scroll-cue">向下捲動 · 走進1891年</div>
+  </div>
+</section>
+
+<!-- =========== CONTEXT =========== -->
+<section id="context">
+  <div class="container">
+    <span class="overline">序幕 · The Cry of an Age</span>
+    <h2 class="section-title">1891年的世界</h2>
+    <p class="lede">
+      工業革命已經改變了人類的生活方式。蒸汽機與紡織廠取代了田園與作坊；少數人積聚了前所未見的財富，多數人卻在煤煙與機器的轟鳴中過著貧苦的生活。教宗良十三世開篇就指出了這個時代的「糾紛因素」——
+    </p>
+    <div class="columns">
+      <div class="col">
+        <div class="col-number">i.</div>
+        <h3>行會的崩塌</h3>
+        <p>古時工人的行會已經在前一世紀被毀滅了，卻並沒有旁的組織來替代它。工人階級被孤立無援的交付與鐵石心腸的僱主和貪得無厭的競爭。</p>
+      </div>
+      <div class="col">
+        <div class="col-number">ii.</div>
+        <h3>財富的兩極</h3>
+        <p>少數個人擁有龐大的財產，大眾卻陷入前所未見的貧乏。契約勞動的習慣與行業集中於少數人之手，使勞苦大眾承受著「並不比奴隸制度好得了多少的桎梏」。</p>
+      </div>
+      <div class="col">
+        <div class="col-number">iii.</div>
+        <h3>革命的誘惑</h3>
+        <p>勞工階級自恃心理日益增大，社會主義者乘機鼓動工人毀滅私產、進行階級鬥爭。普遍的道德敗壞與宗教的被排斥，使整個社會陷入「可驚的嚴重性」之中。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========== WORKER'S DAY =========== -->
+<section id="worker-day">
+  <div class="container">
+    <div class="day-intro">
+      <span class="overline">主敘事 · A Day in a Worker's Life</span>
+      <h2 class="section-title">一個工人的一天</h2>
+      <p class="lede" style="margin-left: auto; margin-right: auto;">
+        通諭關懷的對象，不是抽象的「勞動」，而是有血有肉的工人。讓我們跟隨虛構的紡織廠工人阿福，走過1891年的一日——他的每一個時刻，都對應著通諭裡的一個訓導。
+      </p>
+      <div class="character-card">
+        <div class="portrait">福</div>
+        <div class="meta">
+          <h4>阿福 · 三十歲 · 紡織廠工人</h4>
+          <span class="tag">已婚</span><span class="tag">育有二子</span><span class="tag">天主教友</span>
+          <p>住在工業城邊緣的小屋，每日步行至紡織廠工作。妻子在家照料七歲與四歲的孩子。長子已被工廠雇用做學徒。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="timeline">
+
+      <div class="day-phase">
+        <span class="phase-label">Aurora</span><span class="phase-zh">破曉</span>
+      </div>
+
+      <!-- STATION 1: 04:30 起床 -->
+      <div class="station">
+        <div class="time-marker">04 : 30</div>
+        <div class="scene-card">
+          <div class="scene-image"><img src="scene-dawn.png" alt="凌晨起床" onerror="this.parentElement.style.display='none'"></div>
+          <span class="scene-emoji">🕯️</span>
+          <h3>起床</h3>
+          <p class="scene-text">油燈昏暗。阿福披上工作服，妻子已起身為他切了一塊麵包。屋外尚未天亮，孩子們還在睡。他親吻妻子的額頭，提起工具箱出門。</p>
+
+          <div class="teaching-block">
+            <div class="teaching-label">— 對應主題 —</div>
+            <div class="teaching-theme">勞動的尊嚴</div>
+            <p>通諭明確反對把工人視為「賺錢的牲口」。在天主眼中，勞苦並不可恥——基督自己就是一位木匠的兒子，並且以木匠的身分度過一生大部分歲月。</p>
+            <blockquote>
+              在天主看來，貧窮並不是一種羞辱，用自己的勞力來換取麵包，絕不是一件可恥的事。我們看到基督本身的情形，就更可以堅信這一點……他本來是天主的兒子，而且是天主本身，卻情願換一副樣子，讓人家把他當做一個木匠的兒子。
+              <span class="source">§20 「這不是一木匠嗎？」</span>
+            </blockquote>
+            <div class="reflection">阿福開始他的一天時並沒有想到這些。但他的勞動，本身就帶著一份被聖化的尊嚴。</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- STATION 2: 05:00 走向工廠 -->
+      <div class="station">
+        <div class="time-marker">05 : 00</div>
+        <div class="scene-card">
+          <div class="scene-image"><img src="scene-walk.png" alt="走向工廠" onerror="this.parentElement.style.display='none'"></div>
+          <span class="scene-emoji">🌫️</span>
+          <h3>走向工廠</h3>
+          <p class="scene-text">石板路上濕氣未散，一群沉默的工人從各條巷弄匯入主街。遠方的煙囪已開始噴出黑煙。他想起祖父年輕時還在自己的小作坊織布，那時候每個工匠都屬於一個行會，有兄弟般的扶持——如今，這一切都不在了。</p>
+
+          <div class="teaching-block">
+            <div class="teaching-label">— 對應主題 —</div>
+            <div class="teaching-theme">時代的呼聲</div>
+            <p>通諭開篇即指出，工業革命摧毀了中世紀的行會體系，卻沒有提供任何替代的組織。工人於是被孤立、無援，交給冷酷的市場競爭。</p>
+            <blockquote>
+              古時工人的行會，已經在前一世紀被毀滅了，卻並沒有旁的組織來替代它……因此就漸漸發生出這種現象：工人階級是被孤立無援的交付與鐵石心腸的僱主和貪得無厭的競爭了。
+              <span class="source">§2 現代工業的罪惡</span>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+
+      <div class="day-phase">
+        <span class="phase-label">Labor matutinus</span><span class="phase-zh">上午勞作</span>
+      </div>
+
+      <!-- STATION 3: 06:00 上半工 -->
+      <div class="station">
+        <div class="time-marker">06 : 00</div>
+        <div class="scene-card">
+          <div class="scene-image"><img src="scene-factory.png" alt="紡織廠機器轟鳴" onerror="this.parentElement.style.display='none'"></div>
+          <span class="scene-emoji">⚙️</span>
+          <h3>上半工 · 機器轟鳴</h3>
+          <p class="scene-text">紡織機沒命的轉。空氣中棉絮飛揚，工人連喘息都艱難。隔壁的女工咳嗽不止，但工頭一個眼色就讓她噤聲。再過去一些，七、八歲的童工搬運紗線，疲憊的眼神看著阿福。</p>
+
+          <div class="teaching-block">
+            <div class="teaching-label">— 對應主題 —</div>
+            <div class="teaching-theme">工時、女工、童工的保護</div>
+            <p>通諭極嚴厲地譴責對工人體力的過度榨取，並特別關注礦工、女工、童工等弱勢勞動者，明確主張限制工時、禁止童工進廠。</p>
+            <blockquote>
+              用過度的勞動來把人們磨折著，以致僵化了他們的心靈，損壞了他們的身體，這不僅是不公道，而且是非人道的……日常勞動應該有一個調節，不能延長到體力所能允許的以上的時間去。
+              <span class="source">§33 勞動過度</span>
+            </blockquote>
+            <blockquote>
+              至於說到兒童，我們應該極端留意著，在他們心身二者尚未充分成熟之前，千萬不要把他們放到作場和工廠去。因為，正如暴風雨的氣候會損壞春天的蓓蕾一樣，太早的人生困苦工作的經驗也會敗傷一個孩子的能力，打破他一切青春的希望。
+              <span class="source">§33 女工與童工</span>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+
+      <div class="day-phase">
+        <span class="phase-label">Meridies</span><span class="phase-zh">正午</span>
+      </div>
+
+      <!-- STATION 4: 12:00 午餐 -->
+      <div class="station">
+        <div class="time-marker">12 : 00</div>
+        <div class="scene-card">
+          <div class="scene-image"><img src="scene-bread.png" alt="午餐一塊乾麵包" onerror="this.parentElement.style.display='none'"></div>
+          <span class="scene-emoji">🍞</span>
+          <h3>午餐 · 一塊乾麵包</h3>
+          <p class="scene-text">機器停了片刻。阿福坐在角落，從口袋掏出一塊乾麵包配水。他在心裡默默算：這個月的工資，付了租金、買了煤炭和米，還剩多少？孩子的鞋已經破了。妻子上週又咳嗽。如果工頭再壓低一點工資，這個家還能維持嗎？</p>
+
+          <div class="teaching-block">
+            <div class="teaching-label">— 對應主題 —</div>
+            <div class="teaching-theme">合理工資的原則</div>
+            <p>這是通諭最具革命性的論點之一：工資雖由雙方協議決定，但有一條更高的自然律——報酬必須足夠養活工人及其家庭，過合理而節約的安適生活。否則，協議再「自由」也是不義。</p>
+            <blockquote>
+              照通列，工人和僱主可以作自由的協定，特別是對於工資可以作自由的協定；可是，有一條自然律卻比人與人之間的任何合約都更為重要，更為年代悠久，這條自然律便是，報酬必須能使工資獲得者足夠維持其合理而節約的安適生活。
+              <span class="source">§34 合法工資</span>
+            </blockquote>
+            <blockquote>
+              如果為情勢所迫，或由於害怕更大的困難，工人因為僱主或包頭不肯多給，而祇好接受吃虧的條件，在這場合，他實成了強力或不公道之犧牲者。
+              <span class="source">§34 合法工資</span>
+            </blockquote>
+            <div class="reflection">這一條「家庭工資」（family wage）的原則，後來成為天主教社會訓導的核心，並影響了二十世紀許多國家的勞動立法。</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="day-phase">
+        <span class="phase-label">Labor pomeridianus</span><span class="phase-zh">下午勞作</span>
+      </div>
+
+      <!-- STATION 5: 14:00 下半工 -->
+      <div class="station">
+        <div class="time-marker">14 : 00</div>
+        <div class="scene-card">
+          <div class="scene-image"><img src="scene-conflict.png" alt="下半工兩種誘惑" onerror="this.parentElement.style.display='none'"></div>
+          <span class="scene-emoji">📜</span>
+          <h3>下半工 · 兩種誘惑</h3>
+          <p class="scene-text">機器又響起來。一個老工人滑了一跤，被抬出去——廠裡沒有任何補償。工頭的口袋裡夾著傳單：「奪回工廠！廢除私產！」另一邊，老闆視察時冷冷說了一句：「不滿意可以走，外頭多的是要工作的人。」一邊是社會主義的煽動，一邊是赤裸的剝削。哪一條才是出路？</p>
+
+          <div class="teaching-block">
+            <div class="teaching-label">— 對應主題 —</div>
+            <div class="teaching-theme">兩條死路</div>
+            <p>通諭同時駁斥當時的兩種錯誤路線：社會主義的廢私產主張，與自由放任的資本主義。前者違反人性與自然律，後者忘記了人不是工具。</p>
+            <blockquote>
+              社會主義者既努力要把個人的所有物移轉於社會，他們實際上即損害了每一個工資勞動者的利益，因為他們剝奪了勞動者處理自己工資的自由，並因而破壞了勞動者增加其資產及改善其生活狀況的全部希望與可能。
+              <span class="source">§4 打擊勞工權利</span>
+            </blockquote>
+            <blockquote>
+              為了個人的所得而對貧窮無助的人施行壓力，或是從別人的困乏中圖謀個人的厚利，卻是一件無論人的法律或神的法律都一律認為有罪的事。用欺詐手段來剝奪任何人所應得的工資，乃是一項天主必然會聽到而要忿怒且施以懲罰的罪行。
+              <span class="source">§17 公平工資</span>
+            </blockquote>
+            <div class="reflection">通諭指出第三條路：私產不可廢，但其使用必須有限度；資本與勞動必須像人體的肢體一樣協調，而非互相敵視。</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="day-phase">
+        <span class="phase-label">Vespera</span><span class="phase-zh">黃昏</span>
+      </div>
+
+      <!-- STATION 6: 18:30 公教工人會所 -->
+      <div class="station">
+        <div class="time-marker">18 : 30</div>
+        <div class="scene-card">
+          <div class="scene-image"><img src="scene-guild.png" alt="公教工人會所" onerror="this.parentElement.style.display='none'"></div>
+          <span class="scene-emoji">🤝</span>
+          <h3>公教工人會所</h3>
+          <p class="scene-text">下工後，阿福不直接回家。他繞道去教堂旁的小會所——這是堂區的公教工人互助會。十幾個工友圍著一張長桌，討論本週的傷病補助；本堂神父在角落聆聽。這裡既不鼓吹革命，也不教人逆來順受，而是讓工人們在信仰中互相扶持。</p>
+
+          <div class="teaching-block">
+            <div class="teaching-label">— 對應主題 —</div>
+            <div class="teaching-theme">結社的力量</div>
+            <p>通諭的解決方案中最具實踐力的部分：呼籲恢復工人團體，但這團體必須以信仰與美德為基礎，不只是經濟上的合作社，更是心靈上的兄弟共同體。</p>
+            <blockquote>
+              一個人既經驗到一己的薄弱無能，他就會設法從外界求得幫助……『兩個人合在一起，是比一個人單獨要好一些，因為他們有因聯合而發生的利益。』
+              <span class="source">§37 結社理由</span>
+            </blockquote>
+            <blockquote>
+              加入一個「社會」，乃是人的自然權利，國家應該保護自然權利，決不能加以毀壞；如果國家禁止它的公民組織團體，它就跟它自身的存在原則相矛盾了。
+              <span class="source">§38 私人結社的天賦權</span>
+            </blockquote>
+            <div class="reflection">這個原則在二十世紀催生了全球各地的天主教工會運動，並深刻影響了現代勞工法。</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- STATION 7: 19:30 回家晚餐 -->
+      <div class="station">
+        <div class="time-marker">19 : 30</div>
+        <div class="scene-card">
+          <div class="scene-image"><img src="scene-family.png" alt="回家晚餐" onerror="this.parentElement.style.display='none'"></div>
+          <span class="scene-emoji">🏠</span>
+          <h3>回家 · 晚餐桌前</h3>
+          <p class="scene-text">妻子端上一鍋熱湯。兩個孩子坐在小木桌兩側，眼神亮起來。阿福從口袋掏出今天的工錢——大部分交給妻子，剩下一小枚銅板放進床底的鐵盒。那是給孩子們將來的——也許將來他們能有自己的一小塊地、一個小作坊。</p>
+
+          <div class="teaching-block">
+            <div class="teaching-label">— 對應主題 —</div>
+            <div class="teaching-theme">家庭與私產</div>
+            <p>通諭把「私有財產」的根據建立在家庭責任上：父親有養家、傳承的義務，而要盡這個義務，就必須能擁有並傳承財產。家庭比國家更早存在，社會主義廢私產，等於毀滅家庭。</p>
+            <blockquote>
+              這是一條最神聖的自然律，父親應該供給他所生的子女以食物及一切必需品……做父親的要辦到這一點，除了倚仗有利益的財產的所有權之外，別無他法，他祇有把這分財產用繼承的方式轉渡給他的子女，才算盡了責任。
+              <span class="source">§10 家庭應得所有權</span>
+            </blockquote>
+            <blockquote>
+              家庭既然無論在觀念上或事實上都早於人類之集合成公共社會，前者當然必須有先於後者的權利與義務，此種權利與義務實更直接的根據於自然。
+              <span class="source">§10 家庭權利先於國家</span>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+
+      <div class="day-phase">
+        <span class="phase-label">Nox</span><span class="phase-zh">夜晚</span>
+      </div>
+
+      <!-- STATION 8: 21:00 晚禱 -->
+      <div class="station">
+        <div class="time-marker">21 : 00</div>
+        <div class="scene-card">
+          <div class="scene-image"><img src="scene-prayer.png" alt="晚禱十字架前" onerror="this.parentElement.style.display='none'"></div>
+          <span class="scene-emoji">✝︎</span>
+          <h3>晚禱 · 十字架前</h3>
+          <p class="scene-text">孩子們已睡熟。阿福與妻子跪在牆上的木十字架前，輕聲念天主經（主禱文）。一整天的辛勞、疲憊、屈辱、與一閃而過的甜蜜，都在這短短幾分鐘裡，被安放到一個更大的秩序之中。</p>
+
+          <div class="teaching-block">
+            <div class="teaching-label">— 對應主題 —</div>
+            <div class="teaching-theme">靈魂的尊嚴</div>
+            <p>通諭最深的一層論證：工人首先是有靈魂的人，是按天主肖像所造的。任何制度、契約、或工資談判，都不能侵犯這份神聖的尊嚴。</p>
+            <blockquote>
+              工人們有他們精神和心靈方面的利益。塵世的生活，無論它本身是如何的好，如何的要得。但總不是人之所以被創造的最後目的……倣傚著天主的形象而被創造出來的，乃是靈魂；人的無上權威亦是存在於這個靈魂之中。
+              <span class="source">§32 勞工最寶貴的資財</span>
+            </blockquote>
+            <blockquote>
+              任何人如果侵犯了連天主也是那麼尊重的人格尊嚴，如果阻攔了別人去過作為天堂永恆生活之準備的高級生活，那就一定要受到責罰。
+              <span class="source">§32 勞工最寶貴的資財</span>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+
+      <div class="day-phase">
+        <span class="phase-label">Dies Domini</span><span class="phase-zh">主日</span>
+      </div>
+
+      <!-- STATION 9: Sunday morning -->
+      <div class="station">
+        <div class="time-marker">隔日 · 主日</div>
+        <div class="scene-card">
+          <div class="scene-image"><img src="scene-sunday.png" alt="主日走向彌撒" onerror="this.parentElement.style.display='none'"></div>
+          <span class="scene-emoji">⛪</span>
+          <h3>主日 · 走向彌撒</h3>
+          <p class="scene-text">隔日清晨。沒有機器的轟鳴，只有遠處堂區教堂的鐘聲。阿福一家穿上最整齊的衣裳，孩子們蹦跳著走在前頭。這一天，他不是某個工廠的編號，不是某張薪資單上的數字——他是一個天主的兒子，與整個堂區共同呼吸。</p>
+
+          <div class="teaching-block">
+            <div class="teaching-label">— 對應主題 —</div>
+            <div class="teaching-theme">主日休息的權利</div>
+            <p>通諭主張主日休息不僅是宗教義務，更是工人應在法律上獲得保障的權利——這份權利根源於人對天主的關係，不容任何契約剝奪。</p>
+            <blockquote>
+              瞻禮日和某種節日有停止工作和勞動的責任。這種停工，我們不能僅僅認為是閒暇……這原是宗教所奉為神聖的停工。安息再加上宗教的儀節，就可以使人暫時忘記了日常生活的事務，把他的思想移轉到永恆的事物。
+              <span class="source">§32 休假與宗教實踐</span>
+            </blockquote>
+            <blockquote>
+              在僱主與工人之間所訂立的一切契約之中，差不多總有這麼一個條件，或則明白說出，或則雙方默認著，這條件便是，應容許有靈魂和身體的正常休息。如果契約中有跟這不同的規定，那就違反正義和公道了。
+              <span class="source">§33 靈魂與身體的休息</span>
+            </blockquote>
+            <div class="reflection">當阿福跪在彌撒中時，他並不知道：他這份「在主日歇下勞作」的權利，將在二十世紀寫進世界各國的勞動法。而這一切的源頭，正是這份1891年的通諭。</div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- end timeline -->
+  </div>
+</section>
+
+<!-- =========== QUOTES =========== -->
+<section id="quotes">
+  <div class="container-wide">
+    <div style="text-align: center; max-width: 720px; margin: 0 auto 0;">
+      <span class="overline">金句牆 · Verba Pontificis</span>
+      <h2 class="section-title">通諭中的不朽之言</h2>
+      <p class="lede" style="margin: 0 auto;">
+        這些句子，在頒布的135年後依然有力量——它們不只是給1891年的工人說的，也是給今日每一個工作者、僱主、與政府的。
+      </p>
+    </div>
+
+    <div class="quote-grid">
+      <div class="quote-card">
+        <div class="quote-mark">"</div>
+        <div class="quote-text">資本沒有勞動就沒有辦法，勞動沒有資本亦然。互相協調乃能造成愉快和良好秩序的結果；長期衝突必然會引起糾紛和暴亂。</div>
+        <div class="quote-meta"><span class="quote-tag">階級合作</span> §15</div>
+      </div>
+
+      <div class="quote-card">
+        <div class="quote-mark">"</div>
+        <div class="quote-text">最大的錯誤便是牢不可破的認為階級與階級是天然互相仇視的，認為富人與窮人是天生下來就要互相鬥爭的。</div>
+        <div class="quote-meta"><span class="quote-tag">階級合作</span> §15</div>
+      </div>
+
+      <div class="quote-card">
+        <div class="quote-mark">"</div>
+        <div class="quote-text">用欺詐手段來剝奪任何人所應得的工資，乃是一項天主必然會聽到而要忿怒且施以懲罰的罪行。</div>
+        <div class="quote-meta"><span class="quote-tag">公平工資</span> §17</div>
+      </div>
+
+      <div class="quote-card">
+        <div class="quote-mark">"</div>
+        <div class="quote-text">報酬必須能使工資獲得者足夠維持其合理而節約的安適生活。</div>
+        <div class="quote-meta"><span class="quote-tag">合理工資</span> §34</div>
+      </div>
+
+      <div class="quote-card">
+        <div class="quote-mark">"</div>
+        <div class="quote-text">人是比國家更早，且早在任何國家形成之前，他即已享有供給其肉體之生活的權利了。</div>
+        <div class="quote-meta"><span class="quote-tag">私產與人權</span> §6</div>
+      </div>
+
+      <div class="quote-card">
+        <div class="quote-mark">"</div>
+        <div class="quote-text">那些靠工資渡日的人——他們當然是最薄弱，最感缺乏的——就應該受到公家特別的關心和保護。</div>
+        <div class="quote-meta"><span class="quote-tag">優先選擇貧者</span> §29</div>
+      </div>
+
+      <div class="quote-card">
+        <div class="quote-mark">"</div>
+        <div class="quote-text">在天主看來，貧窮並不是一種羞辱，用自己的勞力來換取麵包，絕不是一件可恥的事。</div>
+        <div class="quote-meta"><span class="quote-tag">勞動尊嚴</span> §20</div>
+      </div>
+
+      <div class="quote-card">
+        <div class="quote-mark">"</div>
+        <div class="quote-text">兩個人合在一起，是比一個人單獨要好一些……兄弟如果能互相幫助，那就係一座堅固的城。</div>
+        <div class="quote-meta"><span class="quote-tag">結社</span> §37</div>
+      </div>
+
+      <div class="quote-card">
+        <div class="quote-mark">"</div>
+        <div class="quote-text">用過度的勞動來把人們磨折著，以致僵化了他們的心靈，損壞了他們的身體，這不僅是不公道，而且是非人道的。</div>
+        <div class="quote-meta"><span class="quote-tag">工時</span> §33</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========== CONCEPTS =========== -->
+<section id="concepts">
+  <div class="container-wide">
+    <div style="text-align: center; max-width: 720px; margin: 0 auto;">
+      <span class="overline">核心概念 · Conceptus</span>
+      <h2 class="section-title">十個關鍵詞</h2>
+      <p class="lede" style="margin: 0 auto 0;">
+        《新事》通諭奠定了天主教社會訓導的核心詞彙——這些概念在後來的Quadragesimo Anno、Centesimus Annus等通諭中不斷展開，至今仍是教會社會教導的骨幹。
+      </p>
+    </div>
+
+    <div class="concept-grid">
+      <div class="concept">
+        <div class="concept-num">I.</div>
+        <div class="concept-name">私有財產</div>
+        <div class="concept-def">是天賦的自然權利，根源於人的理性與家庭責任，國家不可廢除，但其使用須兼顧公益。</div>
+      </div>
+      <div class="concept">
+        <div class="concept-num">II.</div>
+        <div class="concept-name">合理工資</div>
+        <div class="concept-def">不只由市場決定。有一條更高的自然律——工資必須足夠養活工人及其家庭過合宜節約的生活。</div>
+      </div>
+      <div class="concept">
+        <div class="concept-num">III.</div>
+        <div class="concept-name">階級合作</div>
+        <div class="concept-def">資本與勞動如同人體肢體，互相需要、互相適應。反對社會主義者將兩者視為天然敵對的階級鬥爭觀。</div>
+      </div>
+      <div class="concept">
+        <div class="concept-num">IV.</div>
+        <div class="concept-name">勞動的尊嚴</div>
+        <div class="concept-def">勞動不是羞辱，而是榮譽。基督自己以木匠身分勞動。任何把工人視為工具的做法都是非人道。</div>
+      </div>
+      <div class="concept">
+        <div class="concept-num">V.</div>
+        <div class="concept-name">家庭優先</div>
+        <div class="concept-def">家庭比國家更早存在，有自身的權利與義務。國家不可吞併家庭，但應在極端需要時救濟。</div>
+      </div>
+      <div class="concept">
+        <div class="concept-num">VI.</div>
+        <div class="concept-name">分配正義</div>
+        <div class="concept-def">統治者對每一階級都應公道。富人有許多自衛之法，貧者無依，國家應特別保護貧苦者。</div>
+      </div>
+      <div class="concept">
+        <div class="concept-num">VII.</div>
+        <div class="concept-name">結社權利</div>
+        <div class="concept-def">人有度社會生活的自然傾向，加入工人團體是天賦權利。國家須保護，不可禁止。</div>
+      </div>
+      <div class="concept">
+        <div class="concept-num">VIII.</div>
+        <div class="concept-name">主日休息</div>
+        <div class="concept-def">不只是宗教義務，更是工人應在法律上獲得保障的權利，根源於人對永恆事物的關係。</div>
+      </div>
+      <div class="concept">
+        <div class="concept-num">IX.</div>
+        <div class="concept-name">國家的限度</div>
+        <div class="concept-def">國家必須干預以保護弱者、消除糾紛，但有其限度——不可侵越家庭與個人之自然權利。</div>
+      </div>
+      <div class="concept">
+        <div class="concept-num">X.</div>
+        <div class="concept-name">教會的中介</div>
+        <div class="concept-def">沒有宗教與教會的幫助，勞工問題永遠找不到可實行的解決法。教會以教義、誡律、組織三重力量參與其中。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========== EXPLORE =========== -->
+<section id="explore">
+  <div class="container-wide">
+    <div style="text-align: center; max-width: 720px; margin: 0 auto;">
+      <span class="overline">深入探索 · Exploratio</span>
+      <h2 class="section-title">繼續閱讀</h2>
+      <p class="lede" style="margin: 0 auto;">
+        阿福的一天讀完了。但這份通諭的深度遠不止於此——以下三條路徑帶您走得更遠。
+      </p>
+    </div>
+
+    <div class="explore-grid">
+      <a class="explore-card" href="themes.html">
+        <div class="ec-num">I.</div>
+        <h3>三條道路</h3>
+        <p>對照分析：社會主義之路、自由放任之路、與教會所指出的第三條道路。這是通諭的理論骨架。</p>
+        <span class="arrow">主題深探 →</span>
+      </a>
+      <a class="explore-card" href="fulltext.html">
+        <div class="ec-num">II.</div>
+        <h3>通諭全文</h3>
+        <p>保留民國譯文風格的完整四十四段，含原段標題與註解。供深度閱讀與引用查考。</p>
+        <span class="arrow">全文閱讀 →</span>
+      </a>
+      <a class="explore-card" href="context.html">
+        <div class="ec-num">III.</div>
+        <h3>歷史背景</h3>
+        <p>1891年的世界、教宗良十三世其人、以及這份通諭135年來的迴響——直到2026年的《偉大的人類》。</p>
+        <span class="arrow">時代與長河 →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- =========== FOOTER =========== -->
+<footer>
+  <div class="footer-content">
+    <div class="symbol">✦  ✦  ✦</div>
+    <p><strong>Rerum Novarum · 新事通諭</strong></p>
+    <p>教宗良十三世關於勞工問題的通諭<br>頒佈於1891年5月15日 · 羅馬聖伯多祿大殿</p>
+    <p style="margin-top: 28px;">
+      本專題之中文譯本取自<a href="https://archives.catholic.org.hk/The%20Popes/257-18910515C.pdf" target="_blank">天主教香港教區檔案處</a>之民國時期譯本，保留原譯用語（如「神昆」「公教教友」等）以存其歷史風貌。
+    </p>
+    <p>互動敘事「一個工人的一天」之主角阿福為虛構人物，旨在以具體生活脈絡呈現通諭原則。</p>
+    <p>專題網站架構參考<a href="http://events.mai-li.app/encyclical/magnifica-humanitas/" target="_blank">《偉大的人類》通諭專題</a>之沉浸式設計理念。</p>
+    <div class="copyright">2026 · 紀念《新事》通諭頒布 135 週年</div>
+  </div>
+</footer>
+
+<script>
+  // Simple intersection observer for fade-in
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.station, .col, .concept, .quote-card').forEach(el => {
+    el.classList.add('fade-in');
+    observer.observe(el);
+  });
+</script>
+
+</body>
+</html>

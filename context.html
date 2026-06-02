@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>歷史背景與135年迴響 · 《新事》通諭</title>
+<meta name="description" content="《新事》通諭頒布於1891年的工業革命高潮。回溯時代背景、教宗良十三世其人、與135年來社會訓導的一脈相承。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;500;600;700;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #f1ead9;
+    --paper-deep: #e6dcc2;
+    --ink: #1c1f24;
+    --ink-soft: #4a4f57;
+    --ink-faint: #8a8579;
+    --teal: #1f3a3a;
+    --teal-light: #3a5e5e;
+    --brass: #a07d2c;
+    --brass-bright: #c9a248;
+    --papal-red: #8c2f2f;
+    --line: rgba(28, 31, 36, 0.18);
+    --line-soft: rgba(28, 31, 36, 0.08);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Noto Serif TC', serif;
+    background: var(--paper);
+    color: var(--ink);
+    line-height: 1.85;
+    background-image:
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='0.85' numOctaves='2'/%3E%3CfeColorMatrix values='0 0 0 0 0.11 0 0 0 0 0.12 0 0 0 0 0.14 0 0 0 0.025 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  ::selection { background: var(--brass-bright); color: var(--ink); }
+
+  nav.top {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    backdrop-filter: blur(10px);
+    background: rgba(241, 234, 217, 0.9);
+    border-bottom: 1px solid var(--line-soft);
+    padding: 14px 32px;
+    display: flex; align-items: center; justify-content: space-between;
+    font-size: 13px;
+  }
+  nav.top .brand {
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    color: var(--teal);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 14px;
+  }
+  nav.top .links { display: flex; gap: 28px; }
+  nav.top a {
+    color: var(--ink-soft); text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: 0.2s; padding-bottom: 2px;
+  }
+  nav.top a:hover { color: var(--papal-red); border-color: var(--papal-red); }
+  nav.top a.active { color: var(--papal-red); border-color: var(--papal-red); }
+  @media (max-width: 720px) {
+    nav.top { padding: 12px 18px; }
+    nav.top .links { gap: 14px; font-size: 12px; }
+  }
+
+  .page-head {
+    padding: 140px 24px 80px;
+    text-align: center;
+    background:
+      radial-gradient(ellipse 800px 300px at 50% 100%, rgba(31, 58, 58, 0.06), transparent);
+    border-bottom: 1px solid var(--line);
+  }
+  .page-head .latin {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: var(--brass);
+    font-size: 22px;
+    margin-bottom: 8px;
+  }
+  .page-head .breadcrumb {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--ink-faint);
+    letter-spacing: 0.3em;
+    margin-bottom: 32px;
+  }
+  .page-head h1 {
+    font-family: 'Noto Serif TC', serif;
+    font-size: clamp(40px, 7vw, 76px);
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    margin-bottom: 24px;
+  }
+  .page-head .subtitle {
+    font-size: 17px;
+    color: var(--ink-soft);
+    max-width: 720px;
+    margin: 0 auto;
+    line-height: 2;
+  }
+
+  section { padding: 80px 24px; }
+  .container { max-width: 880px; margin: 0 auto; }
+  .container-wide { max-width: 1200px; margin: 0 auto; }
+  .overline {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.4em;
+    color: var(--brass);
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    display: inline-block;
+  }
+  .overline::before { content: '— '; }
+  h2.section-title {
+    font-family: 'Noto Serif TC', serif;
+    font-size: clamp(28px, 5vw, 42px);
+    font-weight: 600;
+    color: var(--ink);
+    line-height: 1.3;
+    margin-bottom: 20px;
+    letter-spacing: 0.05em;
+  }
+  p { font-size: 16px; line-height: 1.9; margin-bottom: 18px; }
+  p.lead { font-size: 18px; color: var(--ink-soft); line-height: 2; }
+
+  /* 1891 World */
+  .world-1891 {
+    background: var(--paper);
+  }
+  .stat-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 24px;
+    margin: 48px 0;
+  }
+  .stat-box {
+    text-align: center;
+    padding: 32px 16px;
+    background: rgba(255, 255, 255, 0.4);
+    border: 1px solid var(--line);
+  }
+  .stat-box .big {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 56px;
+    color: var(--papal-red);
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+  .stat-box .label {
+    font-size: 13px;
+    color: var(--ink-soft);
+    letter-spacing: 0.1em;
+    line-height: 1.7;
+  }
+
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    margin: 48px 0;
+  }
+  @media (max-width: 720px) {
+    .two-col { grid-template-columns: 1fr; gap: 32px; }
+  }
+  .two-col h3 {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 22px;
+    color: var(--teal);
+    margin-bottom: 16px;
+    border-left: 3px solid var(--brass);
+    padding-left: 12px;
+  }
+  .two-col p {
+    font-size: 15px;
+    color: var(--ink-soft);
+  }
+
+  /* Pope's bio */
+  .pope-section {
+    background: var(--paper-deep);
+    padding: 100px 24px;
+  }
+  .pope-card {
+    background: rgba(255, 255, 255, 0.5);
+    border: 1px solid var(--line);
+    padding: 48px;
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 48px;
+  }
+  @media (max-width: 720px) {
+    .pope-card { grid-template-columns: 1fr; padding: 32px; gap: 24px; }
+  }
+  .pope-portrait {
+    aspect-ratio: 3 / 4;
+    background:
+      linear-gradient(180deg, var(--teal) 0%, var(--ink) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--brass-bright);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 80px;
+    position: relative;
+    overflow: hidden;
+  }
+  .pope-portrait img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: sepia(0.15);
+  }
+  .pope-portrait::before {
+    content: '';
+    position: absolute;
+    top: 20px; left: 20px; right: 20px; bottom: 20px;
+    border: 1px solid rgba(201, 162, 72, 0.4);
+    z-index: 2;
+    pointer-events: none;
+  }
+  .pope-portrait .pope-symbol {
+    text-align: center;
+    position: absolute; inset: 0;
+    display: flex; flex-direction: column; justify-content: center; align-items: center;
+    z-index: 1;
+  }
+  .pope-portrait.has-image .pope-symbol { display: none; }
+  .pope-portrait .pope-symbol .crown { font-size: 36px; margin-bottom: 8px; }
+  .pope-portrait .pope-symbol .name { font-size: 20px; letter-spacing: 0.15em; font-style: italic; }
+  .pope-portrait .pope-symbol .num { font-size: 14px; margin-top: 8px; color: rgba(201,162,72,0.7); letter-spacing: 0.3em; }
+
+  /* 1891 World hero image */
+  .world-image {
+    width: 100%;
+    aspect-ratio: 21 / 9;
+    margin: 40px 0;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    background: linear-gradient(135deg, rgba(31,58,58,0.08), rgba(160,125,44,0.05));
+    position: relative;
+  }
+  .world-image img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: sepia(0.2) contrast(0.95);
+  }
+  .world-image::after {
+    content: '';
+    position: absolute; inset: 0;
+    background: linear-gradient(180deg, transparent 60%, rgba(241,234,217,0.5) 100%);
+    pointer-events: none;
+  }
+  .pope-meta h2 {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 32px;
+    margin-bottom: 8px;
+    letter-spacing: 0.05em;
+  }
+  .pope-meta .birthname {
+    font-style: italic;
+    color: var(--ink-soft);
+    margin-bottom: 24px;
+    font-size: 16px;
+    font-family: 'Cormorant Garamond', serif;
+  }
+  .pope-meta .facts {
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    padding: 16px 0;
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: var(--ink-soft);
+  }
+  .pope-meta .facts div { padding: 4px 0; display: flex; }
+  .pope-meta .facts div span:first-child {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--brass);
+    letter-spacing: 0.2em;
+    width: 120px;
+  }
+  .pope-meta p { font-size: 15px; color: var(--ink); }
+
+  /* 135-Year Timeline */
+  .timeline-section {
+    background: var(--paper);
+    padding: 100px 24px 120px;
+  }
+  .doc-timeline {
+    margin-top: 60px;
+    position: relative;
+  }
+  .doc-timeline::before {
+    content: '';
+    position: absolute;
+    left: 100px; top: 0; bottom: 0;
+    width: 1px;
+    background: linear-gradient(180deg, var(--brass) 0%, var(--teal) 50%, var(--papal-red) 100%);
+  }
+  @media (max-width: 720px) {
+    .doc-timeline::before { left: 24px; }
+  }
+  .doc {
+    position: relative;
+    padding-left: 160px;
+    margin-bottom: 56px;
+  }
+  @media (max-width: 720px) {
+    .doc { padding-left: 60px; }
+  }
+  .doc::before {
+    content: '';
+    position: absolute;
+    left: 90px; top: 6px;
+    width: 21px; height: 21px;
+    border-radius: 50%;
+    background: var(--paper);
+    border: 2px solid var(--brass);
+    z-index: 2;
+  }
+  @media (max-width: 720px) {
+    .doc::before { left: 14px; }
+  }
+  .doc.featured::before {
+    background: var(--papal-red);
+    border-color: var(--papal-red);
+    box-shadow: 0 0 0 6px rgba(140, 47, 47, 0.15);
+  }
+  .doc .year {
+    position: absolute;
+    left: 0; top: 0;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+    color: var(--ink);
+    line-height: 1;
+  }
+  @media (max-width: 720px) {
+    .doc .year { position: relative; top: 0; left: 0; margin-bottom: 8px; font-size: 22px; }
+  }
+  .doc .year-anniv {
+    display: block;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    color: var(--brass);
+    letter-spacing: 0.15em;
+    margin-top: 4px;
+  }
+  .doc-card {
+    background: rgba(255, 255, 255, 0.4);
+    border: 1px solid var(--line);
+    padding: 24px 28px;
+    transition: 0.3s;
+  }
+  .doc.featured .doc-card {
+    border-color: var(--papal-red);
+    background: rgba(140, 47, 47, 0.04);
+  }
+  .doc-card:hover {
+    background: rgba(255, 255, 255, 0.7);
+    border-color: var(--brass);
+  }
+  .doc-card .doc-latin {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: var(--brass);
+    font-size: 15px;
+    margin-bottom: 2px;
+  }
+  .doc-card h3 {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 22px;
+    color: var(--ink);
+    margin-bottom: 4px;
+    letter-spacing: 0.05em;
+  }
+  .doc-card .doc-author {
+    font-size: 13px;
+    color: var(--ink-soft);
+    margin-bottom: 16px;
+  }
+  .doc-card .doc-desc {
+    font-size: 14px;
+    color: var(--ink-soft);
+    line-height: 1.85;
+  }
+  .doc-card .doc-link {
+    display: inline-block;
+    margin-top: 12px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--teal);
+    letter-spacing: 0.2em;
+    text-decoration: none;
+    border-bottom: 1px solid var(--teal);
+  }
+  .doc-card .doc-link:hover { color: var(--papal-red); border-color: var(--papal-red); }
+
+  /* Legacy */
+  .legacy-section {
+    background: var(--teal);
+    color: var(--paper);
+    padding: 100px 24px;
+  }
+  .legacy-section .overline { color: var(--brass-bright); }
+  .legacy-section h2 { color: var(--paper); }
+  .legacy-section p { color: rgba(241,234,217,0.9); }
+  .legacy-section blockquote {
+    border-left: 3px solid var(--brass-bright);
+    padding: 16px 24px;
+    margin: 24px 0;
+    font-size: 17px;
+    background: rgba(241,234,217,0.04);
+  }
+  .legacy-section blockquote .src {
+    display: block;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    margin-top: 8px;
+    color: rgba(201, 162, 72, 0.9);
+    letter-spacing: 0.15em;
+  }
+  .legacy-section .legacy-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 24px;
+    margin-top: 40px;
+  }
+  .legacy-section .leg-item {
+    padding: 24px;
+    background: rgba(241,234,217,0.05);
+    border-left: 2px solid var(--brass-bright);
+  }
+  .legacy-section .leg-item h4 {
+    color: var(--brass-bright);
+    font-size: 16px;
+    margin-bottom: 8px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+  }
+  .legacy-section .leg-item p {
+    font-size: 14px;
+    line-height: 1.85;
+    margin: 0;
+  }
+
+  /* Footer */
+  footer {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 60px 24px 40px;
+    text-align: center;
+  }
+  footer .footer-content { max-width: 720px; margin: 0 auto; }
+  footer .btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin: 32px 0; }
+  footer a.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    border: 1px solid var(--brass-bright);
+    color: var(--brass-bright);
+    text-decoration: none;
+    letter-spacing: 0.15em;
+    font-size: 13px;
+    transition: 0.2s;
+  }
+  footer a.btn:hover { background: var(--brass-bright); color: var(--ink); }
+  footer p {
+    color: rgba(241,234,217,0.6);
+    font-size: 13px;
+    line-height: 1.9;
+    margin-bottom: 12px;
+  }
+</style>
+</head>
+<body>
+
+<nav class="top">
+  <div class="brand"><a href="index.html" style="color:inherit;text-decoration:none;">Rerum Novarum · 新事通諭</a></div>
+  <div class="links">
+    <a href="index.html">首頁</a>
+    <a href="themes.html">三條道路</a>
+    <a href="fulltext.html">全文</a>
+    <a href="context.html" class="active">背景</a>
+  </div>
+</nav>
+
+<div class="page-head">
+  <div class="latin">Tempora et Echo</div>
+  <div class="breadcrumb">首頁 · 歷史背景與135年迴響</div>
+  <h1>時代與長河</h1>
+  <div class="subtitle">
+    1891年的世界是什麼樣？頒布這份通諭的教宗良十三世是誰？而這份通諭，又如何成為一條延續135年、貫穿至2026年《偉大的人類》的社會訓導長河之源頭？
+  </div>
+</div>
+
+<!-- 1891 WORLD -->
+<section class="world-1891">
+  <div class="container">
+    <span class="overline">時代背景 · Saeculum XIX</span>
+    <h2 class="section-title">1891年的世界</h2>
+    <p class="lead">第二次工業革命進入高潮。電力、化學、鋼鐵、鐵路重塑歐美各國的面貌。但與此同時，工人階級的悲慘處境、社會主義革命的浪潮、和傳統社會結構的崩解，使整個西方陷入深刻的危機。</p>
+
+    <div class="world-image">
+      <img src="1891-world.png" alt="1891年的世界 · 從行會到工業" onerror="this.parentElement.style.display='none'">
+    </div>
+
+    <div class="stat-row">
+      <div class="stat-box">
+        <div class="big">14h</div>
+        <div class="label">當時歐洲工人<br>平均每日工時</div>
+      </div>
+      <div class="stat-box">
+        <div class="big">6</div>
+        <div class="label">英國紡織廠<br>童工最低年齡</div>
+      </div>
+      <div class="stat-box">
+        <div class="big">43</div>
+        <div class="label">通諭頒布時<br>《共產黨宣言》問世已年</div>
+      </div>
+      <div class="stat-box">
+        <div class="big">81</div>
+        <div class="label">教宗良十三世<br>頒布通諭時年齡</div>
+      </div>
+    </div>
+
+    <div class="two-col">
+      <div>
+        <h3>工業現實</h3>
+        <p>蒸汽機與紡織機讓中世紀的小作坊與工匠行會徹底崩塌。工人從擁有自己工具與技藝的「匠人」，淪為依附於工廠主的「無產者」。城市迅速膨脹，貧民窟、童工、女工剝削、職業傷害無從補償，成為工業城市的日常風景。</p>
+        <p>1891年，倫敦、巴黎、柏林、紐約都已是百萬人口級的工業大都會。但在這些光鮮的城市背後，是大量赤貧的勞動家庭——而他們的處境，在當時並無任何法律保護。</p>
+      </div>
+      <div>
+        <h3>政治激盪</h3>
+        <p>1848年馬克思與恩格斯發表《共產黨宣言》，1864年第一國際成立，1871年巴黎公社震動歐洲，1889年第二國際在巴黎成立。社會主義從思想實驗變成國際運動，工人罷工、街頭衝突、革命的火苗在歐洲各地閃現。</p>
+        <p>另一邊，自由放任的資本主義也走到了極端——美國的「鍍金時代」、英國的「黑色國家」、德國俾斯麥的「文化鬥爭」中的反教權立法，都讓教會感到被擠壓在兩個極端之間。教宗良十三世，正是在這個夾縫中發言。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- POPE LEO XIII -->
+<section class="pope-section">
+  <div class="container">
+    <span class="overline">教宗其人 · Leo XIII</span>
+    <h2 class="section-title">頒布者 · 教宗良十三世</h2>
+    <p class="lead">他被稱為「工人教宗」(Pope of the Workers)。在他81歲時頒布的這份通諭，奠定了天主教社會訓導的基石，也讓教會在現代世界中重新找到自己的聲音。</p>
+
+    <div class="pope-card">
+      <div class="pope-portrait" id="popePortrait">
+        <img src="pope-leo-xiii.png" alt="教宗良十三世肖像" onload="document.getElementById('popePortrait').classList.add('has-image')" onerror="this.style.display='none'">
+        <div class="pope-symbol">
+          <div class="crown">✦</div>
+          <div class="name">Leo XIII</div>
+          <div class="num">M D C C C L X X V I I I — M C M III</div>
+        </div>
+      </div>
+      <div class="pope-meta">
+        <h2>教宗良十三世</h2>
+        <div class="birthname">Vincenzo Gioacchino Pecci · 文琴佐·若亞敬·伯齊</div>
+        <div class="facts">
+          <div><span>誕生</span><span>1810年3月2日 · 意大利卡爾品內托</span></div>
+          <div><span>就任教宗</span><span>1878年2月20日（68歲）</span></div>
+          <div><span>逝世</span><span>1903年7月20日（享年93歲）</span></div>
+          <div><span>任期</span><span>25年5個月 · 史上第四長</span></div>
+          <div><span>通諭數量</span><span>共85份 · 史上最多</span></div>
+        </div>
+        <p>他是一位學者教宗，深諳聖多瑪斯阿奎納斯神學。他繼承了庇護九世時代教會與現代世界對立的緊張關係，但選擇以智慧而非對抗來重新接軌。除了《新事》通諭外，他另外的重要通諭包括論政治權力的《Diuturnum》、論基督徒自由的《Libertas》、論天主教國家組織的《Immortale Dei》——這些前作都在通諭§1中被他親自提及。</p>
+        <p>他活到93歲，是史上最長壽的教宗之一。他在通諭頒布後又活了12年，親眼見證了它在世界各地催生公教工人團體、勞動立法改革、與基督教民主政黨。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 135-YEAR TIMELINE -->
+<section class="timeline-section">
+  <div class="container-wide">
+    <div style="max-width: 720px;">
+      <span class="overline">社會訓導長河 · Doctrina Socialis</span>
+      <h2 class="section-title">135年的迴響</h2>
+      <p class="lead">《新事》通諭並未在1891年結束。它開啟了一條延續135年、由歷任教宗共同編織的社會訓導長河。下列每一份文件，都以不同方式回應同一個根本問題——人在現代社會中如何活得有尊嚴？</p>
+    </div>
+
+    <div class="doc-timeline">
+
+      <div class="doc featured">
+        <div class="year">1891<span class="year-anniv">起源</span></div>
+        <div class="doc-card">
+          <div class="doc-latin">Rerum Novarum</div>
+          <h3>新事</h3>
+          <div class="doc-author">教宗 良十三世</div>
+          <div class="doc-desc">天主教社會訓導的大憲章。論勞工問題：私產、合理工資、階級合作、結社權利、國家干預的限度。本專題網站之主題。</div>
+        </div>
+      </div>
+
+      <div class="doc">
+        <div class="year">1931<span class="year-anniv">40週年</span></div>
+        <div class="doc-card">
+          <div class="doc-latin">Quadragesimo Anno</div>
+          <h3>四十周年</h3>
+          <div class="doc-author">教宗 庇護十一世</div>
+          <div class="doc-desc">在《新事》四十週年頒布。發展「輔助原則」(subsidiarity)——更高一層的社會組織不應越權處理較低層次能自行解決的事務。同時譴責共產主義與「不受約束的資本主義」。</div>
+        </div>
+      </div>
+
+      <div class="doc">
+        <div class="year">1961<span class="year-anniv">70週年</span></div>
+        <div class="doc-card">
+          <div class="doc-latin">Mater et Magistra</div>
+          <h3>慈母與導師</h3>
+          <div class="doc-author">教宗 若望廿三世</div>
+          <div class="doc-desc">將《新事》原則延伸到開發中國家、現代農業、與國際援助。強調工人應參與企業決策，富國有義務協助窮國。</div>
+        </div>
+      </div>
+
+      <div class="doc">
+        <div class="year">1963</div>
+        <div class="doc-card">
+          <div class="doc-latin">Pacem in Terris</div>
+          <h3>地上和平</h3>
+          <div class="doc-author">教宗 若望廿三世</div>
+          <div class="doc-desc">在冷戰高峰時頒布。首次將社會訓導擴展到國際秩序——和平、人權、世界政府、裁軍。第一份明確致「所有善意者」的通諭。</div>
+        </div>
+      </div>
+
+      <div class="doc">
+        <div class="year">1967</div>
+        <div class="doc-card">
+          <div class="doc-latin">Populorum Progressio</div>
+          <h3>萬民的進步</h3>
+          <div class="doc-author">教宗 保祿六世</div>
+          <div class="doc-desc">提出「發展是新名字的和平」(Development is the new name for peace)。強烈批判殖民主義遺產與富國的責任。</div>
+        </div>
+      </div>
+
+      <div class="doc">
+        <div class="year">1981<span class="year-anniv">90週年</span></div>
+        <div class="doc-card">
+          <div class="doc-latin">Laborem Exercens</div>
+          <h3>論人的工作</h3>
+          <div class="doc-author">教宗 若望保祿二世</div>
+          <div class="doc-desc">在《新事》九十週年頒布。提出「人比資本更優先」(priority of labor over capital)。深化勞動神學——人透過工作參與天主的創造，工作首先是「為人」，不是「為物」。</div>
+        </div>
+      </div>
+
+      <div class="doc">
+        <div class="year">1987</div>
+        <div class="doc-card">
+          <div class="doc-latin">Sollicitudo Rei Socialis</div>
+          <h3>社會關懷</h3>
+          <div class="doc-author">教宗 若望保祿二世</div>
+          <div class="doc-desc">譴責「東西兩個集團」（資本主義與共產主義）對發展中國家的雙重壓迫。發展「團結原則」(solidarity)為核心德行。</div>
+        </div>
+      </div>
+
+      <div class="doc featured">
+        <div class="year">1991<span class="year-anniv">100週年</span></div>
+        <div class="doc-card">
+          <div class="doc-latin">Centesimus Annus</div>
+          <h3>百年</h3>
+          <div class="doc-author">教宗 若望保祿二世</div>
+          <div class="doc-desc">《新事》百年紀念通諭。在蘇聯解體之際重新檢視整個社會訓導傳統。肯定市場經濟的某些優點，但強調自由經濟必須在道德與法律框架內運行。</div>
+        </div>
+      </div>
+
+      <div class="doc">
+        <div class="year">2009</div>
+        <div class="doc-card">
+          <div class="doc-latin">Caritas in Veritate</div>
+          <h3>在真理中的愛德</h3>
+          <div class="doc-author">教宗 本篤十六世</div>
+          <div class="doc-desc">在全球金融危機後頒布。提出「全人發展」(integral human development)概念，強調經濟必須以「禮物的邏輯」(logic of gift)為根基。</div>
+        </div>
+      </div>
+
+      <div class="doc">
+        <div class="year">2015</div>
+        <div class="doc-card">
+          <div class="doc-latin">Laudato Si'</div>
+          <h3>願祢受讚頌</h3>
+          <div class="doc-author">教宗 方濟各</div>
+          <div class="doc-desc">首份以環境為主題的通諭。提出「整體生態學」(integral ecology)——人類、社會、與地球的處境是同一個問題的不同面向。</div>
+        </div>
+      </div>
+
+      <div class="doc">
+        <div class="year">2020</div>
+        <div class="doc-card">
+          <div class="doc-latin">Fratelli Tutti</div>
+          <h3>眾位弟兄</h3>
+          <div class="doc-author">教宗 方濟各</div>
+          <div class="doc-desc">在COVID-19疫情中頒布。發展「普世兄弟情誼」與「社會友誼」——以善的撒瑪黎雅人為典範，呼籲跨越國界、宗教、政治的真誠交往。</div>
+        </div>
+      </div>
+
+      <div class="doc featured">
+        <div class="year">2026<span class="year-anniv">135週年</span></div>
+        <div class="doc-card">
+          <div class="doc-latin">Magnifica Humanitas</div>
+          <h3>偉大的人類</h3>
+          <div class="doc-author">教宗 良十四世</div>
+          <div class="doc-desc">在《新事》通諭頒布135週年、由與良十三世同名的新教宗頒布。論人工智慧時代如何守護人——延續《新事》通諭「資本不可吞沒勞動」的精神，問:科技不可吞沒人。</div>
+          <a href="http://events.mai-li.app/encyclical/magnifica-humanitas/" target="_blank" class="doc-link">前往專題網站 →</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- LEGACY -->
+<section class="legacy-section">
+  <div class="container">
+    <span class="overline">影響 · Legacy</span>
+    <h2 class="section-title">這份通諭改變了什麼？</h2>
+    <p>《新事》通諭並非只是一份神學文件——它在二十世紀以極具體的方式改變了世界。以下是它催生或加速的幾項變革：</p>
+
+    <div class="legacy-list">
+      <div class="leg-item">
+        <h4>I. 公教工會運動</h4>
+        <p>從比利時、德國、意大利到拉丁美洲，數以千計的公教工人團體在通諭啟發下成立，深刻影響了二十世紀勞工史。</p>
+      </div>
+      <div class="leg-item">
+        <h4>II. 基督教民主政黨</h4>
+        <p>戰後的德國、意大利、法國、奧地利等國的基督教民主黨，其社會經濟政策的根基都可追溯至《新事》通諭。</p>
+      </div>
+      <div class="leg-item">
+        <h4>III. 勞動立法</h4>
+        <p>八小時工時、最低工資、童工禁令、主日休息、職業傷害補償——這些今日視為理所當然的權利，背後都有通諭的精神推動。</p>
+      </div>
+      <div class="leg-item">
+        <h4>IV. 國際勞工組織</h4>
+        <p>1919年成立的國際勞工組織(ILO)的核心原則，與《新事》通諭的勞動觀高度共振。</p>
+      </div>
+      <div class="leg-item">
+        <h4>V. 社會市場經濟</h4>
+        <p>戰後德國的Ordoliberalism經濟模式，明確以《新事》通諭與《四十周年》為思想根基，影響整個歐洲社會福利國家。</p>
+      </div>
+      <div class="leg-item">
+        <h4>V. 解放神學的對話</h4>
+        <p>1960-80年代拉丁美洲的解放神學，雖在某些點上與羅馬有張力，但其關懷貧者的根源仍可追溯至《新事》通諭。</p>
+      </div>
+    </div>
+
+    <blockquote style="margin-top: 56px;">
+      時代誠然在互相交替，但是這一個世紀的事件，往往會非常出奇的跟另一個世紀相像；因為這些事件都是由天主的權力在指導著，而天主之統治歷史行程又是跟他在創造人物時的意志相合的。
+      <span class="src">§43 公教工會力量</span>
+    </blockquote>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-content">
+    <p style="font-size: 18px; color: var(--paper); letter-spacing: 0.2em;">✦  ✦  ✦</p>
+    <p style="margin-top: 24px;"><strong>從1891到2026 · 135年的長河</strong></p>
+    <p>《新事》通諭不是歷史文物，而是仍在我們腳下流動的活水。</p>
+    <div class="btns">
+      <a class="btn" href="index.html">回到首頁 ←</a>
+      <a class="btn" href="themes.html">主題深探 →</a>
+      <a class="btn" href="fulltext.html">通諭全文 →</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
